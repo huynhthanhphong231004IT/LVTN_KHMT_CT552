@@ -1,0 +1,366 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.baiviet-page {
+  background:
+    linear-gradient(rgba(255,255,255,0.80), rgba(255,255,255,0.60)),
+    url("https://meliawedding.com.vn/wp-content/uploads/2022/11/trong-dong-vector-hoa-van-trong-dong-1239.jpg");
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 80%;   
+  background-attachment: fixed;
+}
+
+.baiviet-page {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 32px;
+  margin-top: 30px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 30px;
+  border-radius: 24px;
+  background: rgba(255,255,255,.78);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255,255,255,.55);
+
+  box-shadow:
+      0 10px 25px rgba(15,23,42,.05),
+      0 25px 60px rgba(15,23,42,.08);
+
+  transition: all .45s cubic-bezier(.22,1,.36,1);
+}
+
+.card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  padding:1px;
+  border-radius:inherit;
+
+  background:linear-gradient(
+      135deg,
+      rgba(255,255,255,.8),
+      rgba(37,99,235,.25),
+      rgba(236,72,153,.2),
+      rgba(255,255,255,.8)
+  );
+
+  -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite:xor;
+          mask-composite:exclude;
+
+  opacity:.55;
+  pointer-events:none;
+}
+.card::after{
+  content:"";
+  position:absolute;
+  width:240px;
+  height:240px;
+  border-radius:50%;
+  top:-120px;
+  right:-120px;
+
+  background:
+      radial-gradient(circle,
+      rgba(59,130,246,.22),
+      transparent 70%);
+
+  transition:.6s;
+}
+
+.card:hover{
+  transform:translateY(-12px) scale(1.02);
+
+  background:
+      linear-gradient(135deg,
+      rgba(255,255,255,.95),
+      rgba(207, 229, 255, 0.92),
+      rgba(255, 199, 212, 0.92));
+
+  box-shadow:
+      0 20px 45px rgba(37,99,235,.12),
+      0 35px 70px rgba(0,0,0,.10);
+}
+
+.card:hover::after{
+  transform:scale(1.35);
+  opacity:.9;
+}
+
+.date{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+
+  width:max-content;
+
+  padding:6px 14px;
+  margin-bottom:18px;
+
+  border-radius:999px;
+
+  background:#eff6ff;
+  color:#2563eb;
+
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.3px;
+}
+
+.card h2{
+  font-size:22px;
+  font-weight:800;
+  line-height:1.45;
+  color:#0f172a;
+
+  margin-bottom:14px;
+
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+
+  transition:.35s;
+}
+
+.card:hover h2{
+  color:#1d4ed8;
+}
+
+.card p{
+  font-size:15.5px;
+  line-height:1.8;
+  color:#64748b;
+
+  margin-bottom:28px;
+
+  display:-webkit-box;
+  -webkit-line-clamp:3;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+
+  transition:.35s;
+}
+
+.card:hover p{
+  color:#334155;
+}
+
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  
+  color: #1976d2;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.read-more svg {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover .read-more {
+  color: #0d47a1;
+}
+
+.card:hover .read-more svg {
+  transform: translateX(6px);
+}
+
+/* SKELETON ANIMATION */
+.skeleton-card {
+  pointer-events: none;
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #e2e8f0 25%, #f1f5f9 50%, #e2e8f0 75%);
+  background-size: 200% 100%;
+  animation: loading-shimmer 1.5s infinite;
+  border-radius: 8px;
+}
+
+.skeleton-title {
+  height: 24px;
+  width: 80%;
+  margin-bottom: 16px;
+  margin-top: 20px;
+}
+
+.skeleton-text {
+  height: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.skeleton-text.short {
+  width: 60%;
+  margin-bottom: 30px;
+}
+
+.skeleton-footer {
+  height: 20px;
+  width: 35%;
+}
+
+@keyframes loading-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@media (max-width: 768px) {
+  .baiviet-page {
+    padding: 40px 16px;
+  }
+  .page-title {
+    font-size: 26px;
+  }
+  .grid {
+    gap: 20px;
+  }
+}
+
+
+.hero_baiviet {
+  margin-top: -50px;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+
+  background:
+    url("https://png.pngtree.com/png-clipart/20221123/ourmid/pngtree-bird-crane-animal-png-image_6171039.png") 8% 20% / 130px no-repeat,
+    url("https://png.pngtree.com/png-clipart/20221123/ourmid/pngtree-bird-crane-animal-png-image_6171039.png") 8% 20% / 130px no-repeat,
+    url("https://png.pngtree.com/png-clipart/20221123/ourmid/pngtree-bird-crane-animal-png-image_6171039.png") 8% 20% / 100px no-repeat,
+    url("https://png.pngtree.com/png-clipart/20221123/ourmid/pngtree-bird-crane-animal-png-image_6171039.png") 8% 20% / 100px no-repeat,
+
+    var(--hero-gradient);
+
+  box-shadow: inset 0 -10px 20px rgba(0,0,0,.2);
+}
+
+.hero_baiviet{
+  animation: birdMove 12s ease-in-out infinite alternate;
+  width: 1390px;
+  margin-left: -140px;
+}
+@keyframes birdMove{
+  0%{
+    background-position:
+      8% 20%,
+      90% 15%,
+      18% 85%,
+      82% 80%,
+      center;
+  }
+
+  50%{
+    background-position:
+      10% 16%,
+      88% 20%,
+      20% 82%,
+      80% 76%,
+      center;
+  }
+
+  100%{
+    background-position:
+      7% 22%,
+      92% 12%,
+      16% 88%,
+      84% 83%,
+      center;
+  }
+}
+.hero_baiviet::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(circle at 20% 90%, rgba(255,255,255,.12), transparent 25%),
+    radial-gradient(circle at 80% 25%, rgba(255,255,255,.08), transparent 20%);
+
+  pointer-events:none;
+}
+.hero_baiviet{
+  filter: drop-shadow(0 0 8px rgba(255,255,255,.15));
+}
+
+.hero_baiviet::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(1px);
+    pointer-events:none;
+}
+
+.hero_baiviet::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 80%);
+}
+
+.hero-inner {
+  max-width: 800px;
+  z-index: 1;
+  padding: 0 20px;
+}
+
+.tag {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 6px 16px;
+  border-radius: 50px;
+  display: inline-block;
+  backdrop-filter: blur(4px);
+  margin-bottom: 10px;
+}

@@ -1,0 +1,232 @@
+
+.slideshow-full {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slideshow-container {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  background-color: #f3f3f3;
+}
+
+.slide-track {
+  display: flex;
+  width: max-content;
+  height: 100%;
+  animation: marquee 55s linear infinite;
+}
+
+.slide {
+  flex: 0 0 auto;
+  margin-right: 16px;
+  height: 100%;
+}
+
+.slide img {
+  height: 100%;
+  width: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+#box-content {
+  width: 95.5vw; 
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#box-content section {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  padding: 20px;
+  width: 100%; 
+  cursor: pointer;
+  overflow: hidden; 
+}
+#box-content section:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+}
+
+#box-content .title{
+  font-weight: bold;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  color: #e20000;
+}
+
+#box-content .content {
+  color: #333;
+  font-size: 18px;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.8; 
+}
+
+#map-section {
+  width: 100%;
+  height: 650px;
+  margin-top: 30px;
+}
+
+#introduction {
+  position: relative;
+  background: #fff;
+  padding: 60px 20px;
+}
+
+#box-content #introduction ul {
+  list-style: none; 
+  padding-left: 0;
+  margin-left: 30px;
+}
+
+#box-content #introduction ul li {
+  background: #ffffff;
+  border-left: 5px solid #1001e0;
+  padding: 14px 20px;
+  margin-top: 10px;
+  margin-bottom: 14px;
+  border-radius: 0 8px 8px 0;
+  width: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  will-change: transform, box-shadow;
+}
+
+#box-content #introduction ul li:hover {
+  background-color: #ebeaff;
+  border-left-color: #1001e0;
+  transform: translateX(8px);
+  box-shadow: 0 6px 12px rgba(64, 77, 255, 0.15);
+  cursor: pointer;
+}
+#introduction {
+  position: relative;
+}
+
+#introduction::after {
+  content: "";
+  position: absolute;
+  top: 340px;
+  right: 50px;
+  width: 550px;
+  height: 180px;
+  background: url("/Hinh_anh/Background/GioiThieu01.png") center/cover no-repeat;
+  transform: translateY(-40%); 
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  z-index: 999;
+}
+
+#introduction::before {
+  content: "";
+  position: absolute;
+  top: 680px;
+  right: 50px;
+  width: 550px;
+  height: 180px;
+  background: url("/Hinh_anh/Background/GioiThieu02.png") center/cover no-repeat;
+  transform: translateY(-30%);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  z-index: 999;
+}
+#list-museaum {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+#list-museaum .title {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#list-museaum .title  {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  color: #e20000;
+}
+
+.museaum-item {
+  position: relative;
+  width: 320px;
+  overflow: hidden;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.museaum-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.museaum-item img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.museaum-item:hover img {
+  transform: scale(1.1);
+}
+
+.museaum-item .caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 12px 15px;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(1, 38, 249, 0.552) 0%, rgba(141, 203, 255, 0.626) 100%);
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  transition: background 0.4s ease, transform 0.4s ease;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.museaum-item:hover .caption {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+  transform: translateY(-5px);
+}
+
+@media screen and (max-width: 1000px) {
+  #list-museaum {
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .museaum-item {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+

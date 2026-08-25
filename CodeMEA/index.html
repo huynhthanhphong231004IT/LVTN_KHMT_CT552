@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<title>Can Tho University - Information security and safety</title>
+<script src="./index.js" defer></script>
+<style>
+  :root {
+    --ctu-blue: #0a4ead;
+    --ctu-light: #e8f1ff;
+    --card-bg: #ffffff;
+    --text-dark: #1e293b;
+    --muted: #64748b;
+  }
+
+  body{
+    margin:0;
+    font-family: "K2D";
+    background:#f1f5f9;
+    color:var(--text-dark);
+  }
+
+  header {
+    width:100%;
+    padding:20px 0;
+    background: #1766a6;
+    color:white;
+    text-align:center;
+    box-shadow:0 2px 8px rgba(0,0,0,0.15);
+  }
+  header h1 {
+    margin:0;
+    font-size:27px;
+    font-weight:600;
+    letter-spacing:0.5px;
+  }
+
+  .container{
+    padding:28px 24px;
+    max-width:1100px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+
+  .card{
+    background:var(--card-bg);
+    padding:20px;
+    border-radius:14px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.08);
+    border:1px solid #e2e8f0;
+  }
+  .card h3{
+    margin-top:0;
+    margin-bottom:12px;
+    font-size:20px;
+    color:var(--ctu-blue);
+  }
+
+  textarea, input[type="text"], input[type="file"]{
+    width:100%;
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #cbd5e1;
+    font-size:14px;
+    margin-top:6px;
+  }
+
+    button {
+    padding:12px 20px;
+    border:none;
+    border-radius:12px; /* bo tròn hơn */
+    background: linear-gradient(135deg, #0a4ead, #1e88e5); /* gradient 2 màu */
+    color:white;
+    cursor:pointer;
+    margin-right:8px;
+    margin-top:12px;
+    font-size:15px;
+    font-weight:600;
+    box-shadow:0 6px 14px rgba(16,24,40,0.25); /* shadow đậm hơn */
+    transition: all 0.3s ease; /* hiệu ứng mượt khi hover */
+    }
+
+    button:hover {
+    transform: translateY(-2px); /* nhấc nhẹ khi hover */
+    box-shadow:0 8px 20px rgba(16,24,40,0.35); /* shadow nổi bật hơn */
+    opacity:0.95;
+    }
+
+    button:active {
+    transform: translateY(0); /* nhấn xuống lại */
+    box-shadow:0 4px 10px rgba(16,24,40,0.25);
+    }
+
+
+  .ghost{
+    background:#e2e8f0;
+    color:#1e293b;
+    box-shadow:none;
+  }
+
+  .img-row{
+    display:flex;
+    gap:12px;
+    margin-top:12px;
+  }
+
+  .img-box{
+    flex:1;
+    height:340px;
+    border:2px dashed #cbd5e1;
+    border-radius:12px;
+    background:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:48px;
+    font-weight:600;
+    color:#94a3b8;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .img-box::before {
+    content: "CTU";
+    position: absolute;
+    font-family: "Segoe UI", Arial, sans-serif;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-15deg);
+    font-size: 200px; 
+    color: rgba(0, 0, 0, 0.05);
+    font-weight: 900;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  footer{
+    width:100%;
+    padding:16px 0;
+    text-align:center;
+    background-color: #145a86;
+    color: #ecf0f1;
+    border-top:1px solid #e2e8f0;
+    margin-top:20px;
+    font-size:20px;
+  }
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>MODULAR ENCRYPTION ALGORITHM FOR IMPROVED SECURE DATA TRANSMISSION</h1>
+</header>
+
+<div class="container">
+  <div class="card">
+    <div style="text-align:center; background-color:#e8f1ff; padding:10px; border-radius:8px;">
+        <h3 style="margin:0; font-weight:700;">MÃ HÓA - GIẢI MÃ</h3>
+    </div>
+
+    <!-- <label style="margin-top:12px;">Tải file plaintext:</label>
+    <input style="width: 1090px;" type="file"> -->
+
+    <label style="margin-top:15px;">Nhập plaintext:</label>
+    <textarea id="plaintext" style="width: 1090px;" placeholder="Nhập plaintext tại đây"></textarea>
+
+    <label style="font-weight:600;">Chọn thư mục ảnh:</label>
+    <input style="width: 1090px;" type="file" id="images_folder" webkitdirectory directory>
+
+    <label style="margin-top:15px; font-weight:600;">Tải file chứa khóa (key) xuống:</label>
+    <button id="download_key_btn" style="width:100%;">Tải key</button>
+
+    <label style="padding-top: 20px;">Văn bản (ciphertext) đã mã hóa:</label>
+    <textarea id="ciphertext" style="width: 1090px;" placeholder="Hiển thị ciphertext"></textarea>
+
+    <label style="margin-top:12px;">Văn bản (plaintext) đã giải hóa:</label>
+    <textarea id="phaintextdec" style="width: 1090px;" placeholder="Hiển thị ciphertext"></textarea>
+
+    <div>
+      <button id="encrypt_btn">Mã hóa</button>
+      <button id="decrypt_btn">Giải mã</button>
+    </div>
+  </div>
+
+  <!-- Phần ảnh chia 2 khung: ảnh gốc và ảnh đã dấu tin -->
+  <div class="card">
+    <div style="text-align:center; background-color:#e8f1ff; padding:10px; border-radius:8px;">
+    <h3 style="margin:0; font-weight:700;">SO SÁNH ẢNH GỐC - ẢNH GIẤU TIN</h3>
+    </div>
+    <div class="img-row">
+      <div class="img-box">ẢNH GỐC</div>
+      <div class="img-box">ẢNH DẤU TIN</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  College of Information and Communication Technology — Can Tho University
+</footer>
+
+</body>
+<style>
+.firefly {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    background: rgb(0, 110, 255);
+    border-radius: 50%;
+    box-shadow: 0 0 10px 2px rgb(0, 110, 255);
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 0; 
+}
+div, header, footer{
+    position: relative; 
+    z-index: 1;
+}
+</style>
+
+
+<!-- <script>
+const numFireflies = 7; 
+const fireflies = [];
+
+for (let i = 0; i < numFireflies; i++) {
+  const firefly = document.createElement('div');
+  firefly.classList.add('firefly');
+  
+  firefly.style.left = Math.random() * window.innerWidth + 'px';
+  firefly.style.top = Math.random() * window.innerHeight + 'px';
+  
+  document.body.appendChild(firefly);
+  fireflies.push({
+    el: firefly,
+    x: parseFloat(firefly.style.left),
+    y: parseFloat(firefly.style.top),
+    dx: (Math.random() - 0.5) * 1.5,
+    dy: (Math.random() - 0.5) * 1.5,
+    size: 6 + Math.random() * 4
+  });
+}
+
+// di chuyển đom đóm
+function animate() {
+  fireflies.forEach(f => {
+    f.x += f.dx;
+    f.y += f.dy;
+
+    // va chạm biên
+    if (f.x < 0 || f.x > window.innerWidth) f.dx *= -1;
+    if (f.y < 0 || f.y > window.innerHeight) f.dy *= -1;
+
+    // nhấp nháy sáng
+    const glow = 0.5 + Math.sin(Date.now() / 500 + f.x + f.y) * 0.5;
+    f.el.style.opacity = glow;
+    f.el.style.left = f.x + 'px';
+    f.el.style.top = f.y + 'px';
+    f.el.style.width = f.size + 'px';
+    f.el.style.height = f.size + 'px';
+  });
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+
+// cập nhật kích thước khi resize
+window.addEventListener('resize', () => {
+  fireflies.forEach(f => {
+    if (f.x > window.innerWidth) f.x = window.innerWidth * Math.random();
+    if (f.y > window.innerHeight) f.y = window.innerHeight * Math.random();
+  });
+});
+</script> -->
+</html>

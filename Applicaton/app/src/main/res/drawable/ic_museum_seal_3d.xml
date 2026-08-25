@@ -1,0 +1,75 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="128dp"
+    android:height="128dp"
+    android:viewportWidth="128"
+    android:viewportHeight="128">
+
+    <!-- Outer Glow / Background Ring -->
+    <path
+        android:fillColor="#102E4A"
+        android:pathData="M64,4 C30.86,4 4,30.86 4,64 C4,97.14 30.86,124 64,124 C97.14,124 124,97.14 124,64 C124,30.86 97.14,4 64,4 Z" />
+
+    <!-- Metallic Cyan Ring -->
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M64,8 C33.16,8 8,33.16 8,64 C8,94.84 33.16,119 64,119 C94.84,119 119,94.84 119,64 C119,33.16 94.84,8 64,8 Z" />
+
+    <!-- Dark Inner Canvas -->
+    <path
+        android:fillColor="#041428"
+        android:pathData="M64,14 C36.38,14 14,36.38 14,64 C14,91.62 36.38,114 64,114 C91.62,114 114,91.62 114,64 C114,36.38 91.62,14 64,14 Z" />
+
+    <!-- Gold Bezel Ring -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M64,20 C39.7,20 20,39.7 20,64 C20,88.3 39.7,108 64,108 C88.3,108 108,88.3 108,64 C108,39.7 88.3,20 64,20 Z" />
+
+    <!-- Deep Blue Inner Core -->
+    <path
+        android:fillColor="#0A223D"
+        android:pathData="M64,25 C42.46,25 25,42.46 25,64 C25,85.54 42.46,103 64,103 C85.54,103 103,85.54 103,64 C103,42.46 85.54,25 64,25 Z" />
+
+    <!-- Bronze Drum Star Center Pattern -->
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M64,36 L68.5,52 L84,52 L71.5,61.5 L76,77 L64,67.5 L52,77 L56.5,61.5 L44,52 L59.5,52 Z" />
+
+    <!-- Concentric Decorative Drum Circles -->
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M64,48 C55.16,48 48,55.16 48,64 C48,72.84 55.16,80 64,80 C72.84,80 80,72.84 80,64 C80,55.16 72.84,48 64,48 Z" />
+
+    <path
+        android:fillColor="#0A223D"
+        android:pathData="M64,52 C57.37,52 52,57.37 52,64 C52,70.63 57.37,76 64,76 C70.63,76 76,70.63 76,64 C76,57.37 70.63,52 64,52 Z" />
+
+    <!-- Museum Columns (3D Heritage Emblem) -->
+    <!-- Left Column -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M48,82 L52,82 L52,96 L48,96 Z" />
+    <!-- Center Column -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M62,80 L66,80 L66,96 L62,96 Z" />
+    <!-- Right Column -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M76,82 L80,82 L80,96 L76,96 Z" />
+
+    <!-- Roof Pediment -->
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M44,82 L64,72 L84,82 Z" />
+
+    <!-- Base Platform -->
+    <path
+        android:fillColor="#FFA000"
+        android:pathData="M42,96 L86,96 L86,100 L42,100 Z" />
+
+    <!-- Top Crown Star -->
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M64,28 L66,32 L70,32 L67,34.5 L68,38.5 L64,36 L60,38.5 L61,34.5 L58,32 L62,32 Z" />
+
+</vector>

@@ -1,0 +1,98 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- Dark Container Body Background -->
+    <path
+        android:fillColor="#071224"
+        android:pathData="M30,10 H170 A20,20 0 0 1 190,30 V170 A20,20 0 0 1 170,190 H30 A20,20 0 0 1 10,170 V30 A20,20 0 0 1 30,10 Z" />
+
+    <!-- Outer Cyan Neon Border -->
+    <path
+        android:strokeColor="#00E5FF"
+        android:strokeWidth="5"
+        android:fillColor="#00000000"
+        android:pathData="M30,10 H170 A20,20 0 0 1 190,30 V170 A20,20 0 0 1 170,190 H30 A20,20 0 0 1 10,170 V30 A20,20 0 0 1 30,10 Z" />
+
+    <!-- Inner Neon Frame Glow -->
+    <path
+        android:strokeColor="#007799"
+        android:strokeWidth="2"
+        android:fillColor="#00000000"
+        android:pathData="M36,16 H164 A14,14 0 0 1 178,30 V170 A14,14 0 0 1 164,184 H36 A14,14 0 0 1 22,170 V30 A14,14 0 0 1 36,16 Z" />
+
+    <!-- Museum Building Structure Slanted Roof & Walls -->
+    <!-- Outer Building Outline -->
+    <path
+        android:strokeColor="#00F0FF"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="#00000000"
+        android:pathData="M45,152 V100 L65,92 V56 L125,38 V65 L145,72 V152 Z" />
+
+    <!-- Main Slanted Roof Beam (Angled Roof) -->
+    <path
+        android:strokeColor="#00F0FF"
+        android:strokeWidth="5"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M60,60 L148,34" />
+
+    <!-- Secondary Roof Beam -->
+    <path
+        android:strokeColor="#00F0FF"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M42,102 L68,92" />
+
+    <!-- Vertical Grid Window Lines (Glass Facade) -->
+    <path
+        android:strokeColor="#00B4D8"
+        android:strokeWidth="2"
+        android:fillColor="#00000000"
+        android:pathData="M78,54 V152 M95,49 V152 M112,44 V152 M130,68 V152 M55,98 V152" />
+
+    <!-- Horizontal Grid Glass Lines -->
+    <path
+        android:strokeColor="#00B4D8"
+        android:strokeWidth="2"
+        android:fillColor="#00000000"
+        android:pathData="M65,75 H125 M65,100 H145 M45,122 H145" />
+
+    <!-- Central Entrance Frame -->
+    <path
+        android:strokeColor="#00F0FF"
+        android:strokeWidth="3"
+        android:fillColor="#07192F"
+        android:pathData="M85,152 V128 H110 V152 Z" />
+
+    <!-- Letter 'M' Logo Emblem (Cyan Neon Highlight) -->
+    <path
+        android:strokeColor="#00F0FF"
+        android:strokeWidth="5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="#00000000"
+        android:pathData="M82,106 V80 L97.5,96 L113,80 V106" />
+
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="#00000000"
+        android:pathData="M82,106 V80 L97.5,96 L113,80 V106" />
+
+    <!-- Bottom Foundation Line -->
+    <path
+        android:strokeColor="#00F0FF"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M40,152 H155" />
+
+</vector>

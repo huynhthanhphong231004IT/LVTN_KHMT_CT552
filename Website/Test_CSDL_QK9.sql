@@ -1,0 +1,52 @@
+USE Bao_Tang_Quan_Khu_9;
+
+SELECT MA_DOAN, TIEU_DE_DOAN
+FROM BAI_VIET_DOAN
+WHERE MA_BAI_VIET = 1;
+
+
+select *
+from HINH_ANH_BAI_VIET;
+
+SELECT * FROM KHU_TRUNG_BAY;
+
+SELECT * FROM HIEN_VAT;
+
+SELECT * FROM HINH_ANH_HIEN_VAT;
+
+
+SELECT 
+    hv.MA_HIEN_VAT,
+    hv.TEN_HIEN_VAT,
+    hv.MO_TA,
+    hv.NAM,
+    hv.NGUON_GOC,
+    hv.MA_KHU,
+
+    mt.MA_MO_TA,
+    mt.TIEU_DE,
+    mt.NOI_DUNG,
+    mt.THU_TU,
+
+    ha.MA_ANH,
+    ha.URL_ANH,
+    ha.MO_TA_HIEN_VAT AS MO_TA_ANH,
+
+    vd.MA_VIDEO,
+    vd.URL_VIDEO,
+    vd.MO_TA_VIDEO
+
+FROM HIEN_VAT hv
+
+LEFT JOIN MO_TA_HIEN_VAT mt 
+    ON hv.MA_HIEN_VAT = mt.MA_HIEN_VAT
+
+LEFT JOIN HINH_ANH_HIEN_VAT ha 
+    ON hv.MA_HIEN_VAT = ha.MA_HIEN_VAT
+
+LEFT JOIN VIDEO_HIEN_VAT vd 
+    ON hv.MA_HIEN_VAT = vd.MA_HIEN_VAT
+
+WHERE hv.MA_HIEN_VAT = 1
+
+ORDER BY mt.THU_TU;

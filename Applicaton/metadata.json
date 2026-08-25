@@ -1,0 +1,6 @@
+{
+  "name": "MUSEAI",
+  "description": "Khám phá di sản bảo tàng với 15 cổ vật độc đáo, trò chơi tương tác định vị GPS phạm vi 10m và Chatbot AI hướng dẫn thông minh.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

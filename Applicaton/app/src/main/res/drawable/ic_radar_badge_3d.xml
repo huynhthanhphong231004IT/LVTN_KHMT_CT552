@@ -1,0 +1,69 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="128dp"
+    android:height="128dp"
+    android:viewportWidth="128"
+    android:viewportHeight="128">
+
+    <!-- Outer Glow Outer Circle -->
+    <path
+        android:fillColor="#041B30"
+        android:pathData="M64,6 C31.97,6 6,31.97 6,64 C6,96.03 31.97,122 64,122 C96.03,122 122,96.03 122,64 C122,31.97 96.03,6 64,6 Z" />
+
+    <!-- Neon Cyan Radar Outer Ring -->
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M64,12 C35.28,12 12,35.28 12,64 C12,92.72 35.28,116 64,116 C92.72,116 116,92.72 116,64 C116,35.28 92.72,12 64,12 Z" />
+
+    <!-- Dark Inner Screen -->
+    <path
+        android:fillColor="#020B16"
+        android:pathData="M64,18 C38.6,18 18,38.6 18,64 C18,89.4 38.6,110 64,110 C89.4,110 110,89.4 110,64 C110,38.6 89.4,18 64,18 Z" />
+
+    <!-- Gold Accent Ring -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M64,28 C44.12,28 28,44.12 28,64 C28,83.88 44.12,100 64,100 C83.88,100 100,83.88 100,64 C100,44.12 83.88,28 64,28 Z" />
+
+    <!-- Deep Blue Grid Center -->
+    <path
+        android:fillColor="#08223B"
+        android:pathData="M64,32 C46.33,32 32,46.33 32,64 C32,81.67 46.33,96 64,96 C81.67,96 96,81.67 96,64 C96,46.33 81.67,32 64,32 Z" />
+
+    <!-- Crosshair Lines -->
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M62,20 L66,20 L66,108 L62,108 Z" />
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M20,62 L108,62 L108,66 L20,66 Z" />
+
+    <!-- Sweep Cone Accent -->
+    <path
+        android:fillColor="#1A00E5FF"
+        android:pathData="M64,64 L100,36 C106,44 110,54 110,64 Z" />
+
+    <!-- Target Blip Dots (Blip 1) -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M80,48 C80,44.69 82.69,42 86,42 C89.31,42 92,44.69 92,48 C92,51.31 89.31,54 86,54 C82.69,54 80,51.31 80,48 Z" />
+
+    <!-- Blip 2 -->
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M42,78 C42,75.79 43.79,74 46,74 C48.21,74 50,75.79 50,78 C50,80.21 48.21,82 46,82 C43.79,82 42,80.21 42,78 Z" />
+
+    <!-- Center Crosshair Ring -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M64,54 C58.48,54 54,58.48 54,64 C54,69.52 58.48,74 64,74 C69.52,74 74,69.52 74,64 C74,58.48 69.52,54 64,54 Z" />
+
+    <path
+        android:fillColor="#020B16"
+        android:pathData="M64,58 C60.69,58 58,60.69 58,64 C58,67.31 60.69,70 64,70 C67.31,70 70,67.31 70,64 C70,60.69 67.31,58 64,58 Z" />
+
+    <!-- Center Pulse Core -->
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M64,61 C62.34,61 61,62.34 61,64 C61,65.66 62.34,67 64,67 C65.66,67 67,65.66 67,64 C67,62.34 65.66,61 64,61 Z" />
+
+</vector>
